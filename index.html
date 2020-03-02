@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jitae KIM Portfolio</title>
+</head>
+<body>
+    
+    <div class="container navbar">
+        <header>
+            <div class="lgo">
+                <h1>Jitae KIM</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="https://aha.ggz.mybluehost.me/julienkim/">Blog</a></li>
+                    <li><a href="https://github.com/">GitHub</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="container main-info-section">
+        <div class="text">
+            <h1>
+                <span>H</span>
+                <span class="m-lft">i</span>
+                <span class="m-lft">,</span>
+                <br>
+                <span>I</span>
+                <span class="m-lft">'</span>
+                <span class="m-lft">m</span>
+                <span class="name">J</span>
+                <span class="m-lft name">i</span>
+                <span class="m-lft name">t</span>
+                <span class="m-lft name">a</span>
+                <span class="m-lft name">e</span>
+                <span class="m-lft name">K</span>
+                <span class="m-lft name">I</span>
+                <span class="m-lft name">M</span>
+                <span class="m-lft">,</span>
+                <br>
+                <span>J</span>
+                <span class="m-lft">a</span>
+                <span class="m-lft">v</span>
+                <span class="m-lft">a</span>
+                <span class="m-lft">s</span>
+                <span class="m-lft">c</span>
+                <span class="m-lft">r</span>
+                <span class="m-lft">i</span>
+                <span class="m-lft">p</span>
+                <span class="m-lft">t</span>
+                <span>D</span>
+                <span class="m-lft">e</span>
+                <span class="m-lft">v</span>
+                <span class="m-lft">e</span>
+                <span class="m-lft">l</span>
+                <span class="m-lft">o</span>
+                <span class="m-lft">p</span>
+                <span class="m-lft">e</span>
+                <span class="m-lft">r</span>
+            </h1>
+            <p>HTML / CSS / JAVASCRIPT</p>
+            <!-- <a href="#contact">Contact Me</a> -->
+        </div>
+        <div class="profile-image">
+            <img src="jitae.JPG" alt="">
+        </div>
+    </div>
+
+    <div class="container about" id="about">
+        <h1>About</h1>
+        <div class="about-me-info">
+            <p>I studied Java script, HTML, and CSS at the code codestates bootcamp.</p>
+            <p>I learned how to communication with someone and I did some projects in there.</p>
+            <p>As I was working on a project or doing pair programming, I found communication was the most important thing. Coding skills are also important, but over 90% of them are communication.</p>
+        </div>
+        <img src="about.jpg" alt="">
+    </div>
+
+    <div class="container skills" id="skills">
+        <h1>Skills</h1>
+        <!-- <p class="skills-info"></p> -->
+        <div class="skills-card">
+        <div class="html">
+            <img src="html.png" alt="">
+            <h3>HTML</h3>
+            <p>6 monthes Experoence</p>
+        </div>
+        <div class="css">
+            <img src="css.png" alt="">
+            <h3>CSS</h3>
+            <p>6 monthes Experoence</p>
+        </div>
+        <div class="javascript">
+            <img src="js.png" alt="">
+            <h3>JavaScript</h3>
+            <p>6 monthes Experoence</p>
+        </div>
+      </div> 
+    </div>
+
+    <div class="container project" id="project">
+        <h1>project</h1>
+        <div class="project-category">
+            <button id="web" class="active" onclick="showRequiredCategory(this)">Web Development</button>
+            <button id="app" class="active" onclick="showRequiredCategory(this)">App Development</button>
+        </div>
+        <div class="category-web showCategory">
+            <a href=""><img src="sample.jpg"></a>
+
+        </div>
+        <div class="category-app hideCategory">
+            <a href=""><img src="ssample.jpg"></a>
+
+        </div>
+    </div>
+    <!-- <div class="container contact" id="contact">
+        <h1>Contact</h1>
+        <form>
+            <input type="text" name="name" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="email" placeholder="bboingw@gmail.com" disabled>
+            <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div> -->
+
+    <footer>
+        <hr>
+        <p>2020 Portfolio project.</p>
+    </footer>
+
+    <script src="script.js"></script>    
+</body>
+</html>

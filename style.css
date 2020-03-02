@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /*사이즈를 같게 한다*/
+    font-family: 'PT Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*클릭했을때 스크롤이 천천히 움직인다*/
+}
+
+.container {
+    padding: 0 100px 0 100px;
+}
+
+nav ul,
+.main-info-section,
+.project-category {
+    display: flex;
+    flex-wrap: wrap; /* 길이를 설정한다*/
+    justify-content: space-between; /* 줄 바꿈 설정*/
+}
+
+body {
+    background-color: #252627;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* 가로 정렬*/
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: #181818;
+}
+
+header h1,
+header a,
+.text p,
+.about h1,
+.skills h1,
+.project h1 {
+/* .contact h1 { */
+    color: #707070;
+}
+
+li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    font-size: .9rem; /* root 폰트 사이즈 크기에따라 변화된다*/
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%); /* 기울임 조절가능*/
+}
+
+.main-info-section {
+    height: calc(100vh - 81.6px);
+    /*calc 계산기 함수*/
+    /* vh top의 비율과 함께 보이는 크기에 따라 변화함*/
+}
+
+.text {
+    margin-top: 120px;
+}
+
+.text h1 {
+    color: #fff;
+    font-size: 3rem;
+    cursor: context-menu;
+}
+
+.text span {
+    display: inline-block;
+    /*inline-block은 요소의 패딩이 존중됨*/
+    /*inline은 존중되지 않음*/
+}
+
+span:hover {
+    /* 해당 element 위로 마우스를 올리면 변화가 일어남*/
+    color: rgb(138, 198, 255);
+    transition: all .5s;
+    /*element 위로 마우스를 올리면 색이 변함*/
+}
+
+span.name {
+    color: #ed5565;
+}
+
+span.m-left {
+    margin-left: -10px;
+}
+
+.text p {
+    letter-spacing: 3px;
+    /*문자 간격 조정*/
+    word-spacing: 10px;
+    /*단어 사이의 간격을 조정한다.*/
+    font-size: .8rem;
+}
+
+/* .text a {
+    padding: 12px 25px;
+    background-color: none;
+    border: 3px solid #ED5565;
+    color: #ED5565;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+}
+
+.text a:hover {
+    color: #fff;
+}
+
+.text a::before {
+    content: '';
+    background-color: #ED5565;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.text a:hover::before {
+    height: 100%;
+} */
+
+.profile-image img {
+    width: 450px;
+    margin-top: 50px;
+}
+
+.about {
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.about h1,
+.project h1 {
+    font-size: 10rem;
+    z-index: 0; /*오버레이 같이 위 아래 겹치는 것의 순서*/
+    opacity: .1;
+}
+
+.about-me-info {
+    max-width: 900px;
+    background-color: #252627;
+    box-shadow: 0 0 1.2rem rgba(0,0,0,.25);
+    padding: 50px;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.about-me-info p {
+    font-size: 1.3rem;
+    color: #BEBEBE;
+}
+
+.about-me-info p:nth-child(2), /*부모의 두번째 자식*/
+.about-me-info p:last-child { /*부모의 마지막 자식*/
+    margin-top: 30px;
+}
+
+.about img {
+    width: 350px;
+    position: relative;
+    top: -250px;
+    left: calc(100% - 100px);
+    right: calc(100% - 100px);
+    transform: translateX(calc(-100% + 100px));
+}
+/*---------------------------------------------------------------------------------------*/
+.skills {
+    height: 100vh;
+}
+
+.skills h1 {
+/* .contact h1 { */
+    text-align: right;
+    font-size: 10rem;
+    opacity: .1; /* 요소의 불투명도 설정*/
+}
+
+.skills-info {
+    font-size: 1.4rem;
+    color: #bebebe;
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills-card {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 700px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.skills-card div {
+    border: 2px solid #BEBEBE;
+    padding: 30px;
+    margin: 10px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-card div:after { /*각 div 요소 뒤에 실행한다.*/
+    content: '';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: -1;
+    transition: .5s step-start;
+}
+
+.skills-card div:hover::after {
+    height: 100%;
+}
+
+.skills-card div:hover p {
+    color: #fff;
+}
+
+.skill-card div:first-child {
+    margin-left: 0;
+}
+
+.skills-card p {
+    max-width: 100px;
+    font-size: .9rem;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.skills img {
+    width: 90px;
+}
+
+.skills h3 {
+    color: #fff;
+    margin-top: 10px;
+}
+/* --------------------------------------------------------------------*/
+.project-category button {
+    text-transform: capitalize;
+    border: 3px solid #ED5565;
+    padding: 15px 50px;
+    margin: 0px 180px;
+    border-radius: 50px;
+    color: #ED5565;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: #252627;
+    outline: none;
+    cursor: pointer;
+}
+
+div[class^='category-'] {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.project a {
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+}
+
+.project-category .active {
+    background-color: #ED5565;
+}
+
+button.active {
+    color: #fff;
+}
+
+.project a img {
+    width: 350px;
+    justify-self: center;
+}
+
+div.hideCategory {
+    display: none;
+}
+
+.showCategory {
+    display: block;
+}
+
+/* .contact {
+    margin-top: 50px;
+} */
+
+/* form input,
+form textarea {
+    display: block;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 500px;
+    padding: 20px;
+    background-color: #252627;
+    border: 3px solid #707070;
+    margin: 20px 0;
+    outline: none;
+    font-size: 1.2rem;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+form input:last-child {
+    width: 150px;
+    background-color: #ED5565;
+    border: none;
+    cursor: pointer;
+} */
+
+footer hr {
+    border: 2px solid #707070;
+    margin-top: 80px;
+}
+
+footer p {
+    text-align: center;
+    color: #707070;
+    font-size: 1.2rem;
+    padding: 30px 0;
+}
